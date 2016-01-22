@@ -1,0 +1,9 @@
+{% load staticfiles %}
+
+<HTML>
+
+	<H1>It's working</H1>
+	{% for workers in wks %}
+		<p>{{ workers.first_name }} {{workers.last_name}}</p>
+	{% endfor %}
+</HTML>
