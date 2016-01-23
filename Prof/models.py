@@ -4,12 +4,25 @@ from django.db import models
 
 # Create your models here.
 
-class worker(models.Model):
-	id_worker = models.AutoField
-	last_name = models.CharField(max_length=200)
-	first_name = models.CharField(max_length=200)
-	age = models.IntegerField(default = 0)
-	email = models.EmailField(max_length=100)
+
+
+class Worker(models.Model):
+
+	GENDER_CHOICES = (
+        ('M', 'Male'),
+        ('F', 'Female'),
+    )
+
+	
+	first_name = models.CharField(max_length = 100)
+	last_name = models.CharField(max_length = 100)
+	sex = models.CharField(max_length=1,choices=GENDER_CHOICES)
+	email = models.EmailField(max_length = 100)
+	cellphone = models.IntegerField(default=0)
+	phone = models.IntegerField(default=0)
+	address = models.CharField(max_length = 100)
+	city = models.CharField(max_length = 100)
+	profession = models.CharField(max_length = 100)
 
 	def __str__(self):
 		comp = self.first_name + ' ' +self.last_name

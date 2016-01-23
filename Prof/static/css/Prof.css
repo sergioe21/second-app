@@ -1,0 +1,39 @@
+
+h1 {
+  line-height: 80px;
+  text-align:center;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-style: inherit;
+  color: #000000;
+  
+}
+
+body {
+  
+      background-image: url(http://www.vallourec-ra2013.com/assets/img/background/background-univ-petrole-degrade.png);
+  
+}
+li {
+  text-align: center;
+  list-style-type: none;
+  
+}
+
+ul {
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  color: #000000;
+  font-size:20px;
+  text-align:center;
+  line-height: 35px; 
+  font-style: inherit;
+}
+
+a {
+
+  text-decoration: none;
+  color: white;
+}
+header{
+  text-align: right;
+
+}

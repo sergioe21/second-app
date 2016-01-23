@@ -1,9 +1,32 @@
 {% load staticfiles %}
 
 <HTML>
+	<HEADER>
+	<link rel="stylesheet" href="{% static 'css/Prof.css' %}">
+	</HEADER>
 
-	<H1>It's working</H1>
-	{% for workers in wks %}
-		<p>{{ workers.first_name }} {{workers.last_name}}</p>
-	{% endfor %}
+	<body>
+	<header><a href="/admin/">Admin Site</a></header>
+      
+  	<article>
+  	{% for worker in wks %}
+    <div>
+      <h1>{{ worker.first_name }} {{ worker.last_name }}</h1>
+      
+     <ul>
+         <li>Profession: {{worker.profession}} </li> 
+         <li>Email: {{ worker.email }}</li>
+         <li>Cellphone Number: {{ worker.cellphone }}</li>
+         <li>Phone Number: {{worker.phone}} </li>
+         <li>Address: {{worker.address}} - {{worker.city}} </li>
+         
+          
+    </ul>
+
+    </div>
+   	{% endfor %}
+
+	  </article>  
+
+	</body>
 </HTML>
